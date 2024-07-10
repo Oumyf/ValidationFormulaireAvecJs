@@ -7,34 +7,62 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form class="form">
+    <form class="form" action="traitement.php" method="POST" id="myform">
         <p class="title">Inscription </p>
             <div class="flex">
             <label>
-                <input class="input" type="text" placeholder="" required="">
+                <input class="input" type="text" placeholder="" required id="prenom">
                 <span>Prénom</span>
             </label>
     
             <label>
-                <input class="input" type="text" placeholder="" required="">
+                <input class="input" type="text" placeholder="" required id="nom">
                 <span>Nom</span>
             </label>
         </div>  
                 
         <label>
-            <input class="input" type="email" placeholder="" required="">
+            <input class="input" type="email" placeholder="" required id="mail">
             <span>Adresse Email</span>
         </label> 
             
         <label>
-            <input class="input" type="password" placeholder="" required="">
+            <input class="input" type="password" placeholder="" required id="mdp">
             <span>Mot de passe</span>
         </label>
-        <label>
-            <input class="input" type="password" placeholder="" required="">
-            <span>Confirmer votre password</span>
-        </label>
-        <button class="submit">Soumettre</button>
+        <button class="submit" id="button" type="submit">Soumettre</button>
     </form>
+    
+    <script>
+        // Step 1: Find the element we want the event on
+        // var button = document.getElementById("button");
+        // Step 2: Define the event listener function
+        // var onButtonClick = function() {
+        //   document.getElementById("message").textContent += "You clicked me! Thank you so much!";  
+        // };
+        // Step 3: Attach event listener to element
+        // button.addEventListener("click", onButtonClick);
+
+
+                // Step 1: Find the element we want the event on
+        let myform = document.getElementById('myform');
+        let button = document.getElementById('button');
+        
+        // Step 2: Define the event listener function
+        myform.addEventListener('submit', function(e){
+            let prenom = document.getElementById('prenom');
+            let nom = document.getElementById('nom');
+            let mail = document.getElementById('mail');
+            let mdp = document.getElementById('mdp');
+
+            if(prenom.value.trim()===""){
+                e.preventDefault();
+            }
+
+})
+    
+
+
+    </script>
 </body>
 </html>

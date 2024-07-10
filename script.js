@@ -18,7 +18,13 @@ document.getElementById('myform').addEventListener('submit', function (e) {
         document.getElementById('errorPrenom').textContent = "Le prénom ne peut contenir que des lettres.";
         document.getElementById('errorPrenom').style.color = 'red';
         isValid = false;
-    } else {
+    } 
+    else if (!myregex.test(prenom.value) || prenom.value.length < 3 || prenom.value.length > 15) {
+        document.getElementById('errorPrenom').textContent = "Le champ prenom doit contenir entre 3 et 15 caractères et doit avoir des lettres seulement.";
+        document.getElementById('errorPrenom').style.color = 'red';
+        isValid = false;
+    }
+    else {
         document.getElementById('errorPrenom').textContent = "";
     }
 
@@ -26,11 +32,18 @@ document.getElementById('myform').addEventListener('submit', function (e) {
         document.getElementById('errorNom').textContent = "Le champ nom est requis.";
         document.getElementById('errorNom').style.color = 'red';
         isValid = false;
-    } else if (!myregex.test(nom.value)) {
+    } 
+    else if (!myregex.test(nom.value)) {
         document.getElementById('errorNom').textContent = "Le nom ne peut contenir que des lettres.";
         document.getElementById('errorNom').style.color = 'red';
         isValid = false;
-    } else {
+    } 
+    else if (!myregex.test(nom.value) || nom.value.length < 3 || nom.value.length > 15) {
+        document.getElementById('errorPrenom').textContent = "Le champ nom doit contenir entre 3 et 15 caractères et doit avoir des lettres seulement.";
+        document.getElementById('errorPrenom').style.color = 'red';
+        isValid = false;
+    }
+    else {
         document.getElementById('errorNom').textContent = "";
     }
 
@@ -42,7 +55,8 @@ document.getElementById('myform').addEventListener('submit', function (e) {
         document.getElementById('errorMail').textContent = "Veuillez entrer une adresse e-mail valide.";
         document.getElementById('errorMail').style.color = 'red';
         isValid = false;
-    } else {
+    } 
+    else {
         document.getElementById('errorMail').textContent = "";
     }
 
@@ -50,7 +64,13 @@ document.getElementById('myform').addEventListener('submit', function (e) {
         document.getElementById('errorMdp').textContent = "Le champ mot de passe est requis.";
         document.getElementById('errorMdp').style.color = 'red';
         isValid = false;
-    } else {
+    } 
+    else if (mdp.value.length < 8) {
+        document.getElementById('errorMdp').textContent = "Le champ mot de passe doit contenir au moins 8 caractères";
+        document.getElementById('errorMdp').style.color = 'red';
+        isValid = false;
+    }
+    else {
         document.getElementById('errorMdp').textContent = "";
     }
 

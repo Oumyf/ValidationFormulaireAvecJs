@@ -7,34 +7,46 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form class="form" action="traitement.html" method="POST" id="myform">
-        <p class="title">Inscription </p>
-            <label>
-                <input class="input" type="text" placeholder=""  id="prenom">
-                <span>Prénom</span>
-                </label>
-                <span id="errorPrenom"></span>
-                <label>
-                    <input class="input" type="text" placeholder=""  id="nom">
-                    <span>Nom</span>
-                    </label>
-                    <span id="errorNom"></span>
+    <form class="form"  id="myform">
+        <p class="title">Inscription</p>
+        <label>
+            <input class="input" type="text" placeholder="" id="prenom">
+            <span>Prénom</span>
+        </label>
+        <span id="errorPrenom"></span>
+        <label>
+            <input class="input" type="text" placeholder="" id="nom">
+            <span>Nom</span>
+        </label>
+        <span id="errorNom"></span>
+        <label>
+            <input class="input" type="email" placeholder="" id="mail">
+            <span>Adresse Email</span>
+        </label>
+        <span id="errorMail"></span>
+        <label>
+            <input class="input" type="password" placeholder="" id="mdp">
+            <span>Mot de passe</span>
+        </label>
+        <span id="errorMdp"></span>
+        <button class="submit" id="button" type="submit">Soumettre</button>
+    </form>
 
-                    
-                    <label>
-                        <input class="input" type="email" placeholder=""  id="mail">
-                        <span>Adresse Email</span>
-                        </label> 
-                        <span id="errorMail"></span>
+    <div id="container" style="display:none;">
+        <div id="success-box">
+            <div class="dot"></div>
+            <div class="dot two"></div>
+            <div class="face">
+                <div class="eye"></div>
+                <div class="eye right"></div>
+                <div class="mouth happy"></div>
+            </div>
+            <div class="shadow scale"></div>
+            <div class="message"><h1 class="alert">Success!</h1><p>yay, everything is working.</p></div>
+            <button class="button-box"><h1 class="green">continue</h1></button>
+        </div>
+    </div>
 
-                        <label>
-                            <input class="input" type="password" placeholder=""  id="mdp">
-                            <span>Mot de passe</span>
-                            </label>
-                            <span id="errorMdp"></span>
-
-                            <button class="submit" id="button" type="submit">Soumettre</button>
-                            </form>
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

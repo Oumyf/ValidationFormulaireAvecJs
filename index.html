@@ -3,66 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Validation Données avec Javascript</title>
+    <title>Form Validation</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form class="form" action="traitement.php" method="POST" id="myform">
+    <form class="form" action="traitement.html" method="POST" id="myform">
         <p class="title">Inscription </p>
-            <div class="flex">
             <label>
-                <input class="input" type="text" placeholder="" required id="prenom">
+                <input class="input" type="text" placeholder=""  id="prenom">
                 <span>Prénom</span>
-            </label>
-    
-            <label>
-                <input class="input" type="text" placeholder="" required id="nom">
-                <span>Nom</span>
-            </label>
-        </div>  
-                
-        <label>
-            <input class="input" type="email" placeholder="" required id="mail">
-            <span>Adresse Email</span>
-        </label> 
-            
-        <label>
-            <input class="input" type="password" placeholder="" required id="mdp">
-            <span>Mot de passe</span>
-        </label>
-        <button class="submit" id="button" type="submit">Soumettre</button>
-    </form>
-    
-    <script>
-        // Step 1: Find the element we want the event on
-        // var button = document.getElementById("button");
-        // Step 2: Define the event listener function
-        // var onButtonClick = function() {
-        //   document.getElementById("message").textContent += "You clicked me! Thank you so much!";  
-        // };
-        // Step 3: Attach event listener to element
-        // button.addEventListener("click", onButtonClick);
+                </label>
+                <span id="errorPrenom"></span>
+                <label>
+                    <input class="input" type="text" placeholder=""  id="nom">
+                    <span>Nom</span>
+                    </label>
+                    <span id="errorNom"></span>
 
+                    
+                    <label>
+                        <input class="input" type="email" placeholder=""  id="mail">
+                        <span>Adresse Email</span>
+                        </label> 
+                        <span id="errorMail"></span>
 
-                // Step 1: Find the element we want the event on
-        let myform = document.getElementById('myform');
-        let button = document.getElementById('button');
-        
-        // Step 2: Define the event listener function
-        myform.addEventListener('submit', function(e){
-            let prenom = document.getElementById('prenom');
-            let nom = document.getElementById('nom');
-            let mail = document.getElementById('mail');
-            let mdp = document.getElementById('mdp');
+                        <label>
+                            <input class="input" type="password" placeholder=""  id="mdp">
+                            <span>Mot de passe</span>
+                            </label>
+                            <span id="errorMdp"></span>
 
-            if(prenom.value.trim()===""){
-                e.preventDefault();
-            }
-
-})
-    
-
-
-    </script>
+                            <button class="submit" id="button" type="submit">Soumettre</button>
+                            </form>
+<script src="script.js"></script>
 </body>
 </html>
